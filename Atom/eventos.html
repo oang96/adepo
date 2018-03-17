@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+  <head >
+    <link rel="shortcut icon" type="image/png" href="inconPag.jpg" />
+        <title>Carreras</title>
+
+  <style type="text/css">
+
+  @import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+  * {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+      body{
+        background: #f5f5f5;
+      }
+
+      div.menu{
+      width: 240px;
+      padding: 0;
+      margin: 0;
+      position: fixed;
+      background-color: #2f2f2f;
+      color:#F0FFFF;
+
+
+      }
+
+
+      ul{
+        font-size: 16px;
+        font-style: italic;
+        font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
+      }
+
+      li.Home {
+        list-style-image: url('home.png');
+        margin: 45px;
+        }
+        li.Galeria{
+          list-style-image: url('camara.png');
+            margin: 45px;
+        }
+        li.Eventos{
+          list-style-image: url('car.png');
+            margin: 45px;
+        }
+        li.Otros{
+          list-style-image: url('circulo.png');
+            margin: 45px;
+        }
+
+        li a {
+          color: white;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+        li a:hover {
+    background-color: #ccc;
+    width: 175px;
+}
+
+    img.presentacion{
+      border-radius: 25px;
+      width: 50%;
+      height: 50%;
+      margin: 0 0 0 50px;
+      box-shadow: 0px 5px 15px 5px black;
+    }
+
+
+    #container {
+    width: 240px;
+    margin: 0 auto;
+    }
+    .ex2 img{
+      box-shadow: 0px 5px 15px 5px black;
+        border-radius: 20px;
+    height: 15%;
+    width: 15%;
+    margin: 15px 0;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    }
+    .ex2 img:hover {
+    height: 20%;
+    width: 20%;
+}
+    h3{
+      margin-left: 70px;
+      font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
+    }
+
+
+.container {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 80px;
+  top: 20px;
+}
+.div-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.div-img.hidden {
+  overflow: hidden;
+}
+.div-img .img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  transform: translate(0px);
+  -ms-transform: translate(0px);
+  -moz-transform: translate(0px);
+  -webkit-transform: translate(0px);
+  -o-transform: translate(0px);
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+}
+
+.div-img .imgleft {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  transform: translate(0px);
+  -ms-transform: translate(0px);
+  -moz-transform: translate(0px);
+  -webkit-transform: translate(0px);
+  -o-transform: translate(0px);
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+}
+.div-img .text {
+  font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
+  position: absolute;
+  z-index: -1;
+  display: block;
+  height: 50%;
+  top: 0;
+  left: 35%;
+  padding-left: 5px;
+  opacity: 0;
+  transition: all 1.5s;
+  -webkit-transition: all 1.5s ease-in;
+  -moz-transition: all 1.5s ease-in;
+  -ms-transition: all 1.5s ease-in;
+  -o-transition: all 1.5s ease-in;
+}
+.div-img .textleft {
+  font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
+  position: absolute;
+  z-index: -1;
+  display: block;
+  height: 50%;
+  top: 0;
+  left: 0;
+  padding-left: 5px;
+  opacity: 0;
+  transition: all 1.5s;
+  -webkit-transition: all 1.5s ease-in;
+  -moz-transition: all 1.5s ease-in;
+  -ms-transition: all 1.5s ease-in;
+  -o-transition: all 1.5s ease-in;
+}
+.div-img .overlay {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+}
+.div-img:hover .img {
+  transform: translate(-125px, -125px);
+  -ms-transform: translate(-125px, -125px);
+  -moz-transform: translate(-125px, -125px);
+  -webkit-transform: translate(-125px, -125px);
+  -o-transform: translate(-125px, -125px);
+}
+
+.div-img:hover .imgleft {
+  transform: translate(125px, 125px);
+  -ms-transform: translate(125px, 125px);
+  -moz-transform: translate(125px, 125px);
+  -webkit-transform: translate(125px, 125px);
+  -o-transform: translate(125px, 125px);
+}
+.div-img:hover .overlay {
+  opacity: 1;
+}
+.div-img:hover .text {
+  opacity: 1;}
+
+  .div-img:hover .textleft {
+    opacity: 1;}
+
+
+  </style>
+
+  </head>
+
+  <body>
+
+    <div class="menu">
+  <br>
+  <img class="presentacion" src="car2.png" alt="vista" >
+  <h3><i>Eventos</i></h3>
+  <br>
+  <hr color="black">
+
+  <ul>
+    <li class="Home">
+      <a href="index.html">
+        <pre>              Home</pre>
+      </a>
+    </li>
+
+    <li class="Galeria">
+      <a href="galeria.html">
+        <pre>           Galeria</pre>
+      </a>
+    </li>
+
+    <li class="Eventos">
+    <a href="eventos.html">
+      <pre>           Eventos</pre>
+    </a>
+    </li>
+
+    <li class="Otros">
+     <a href="otros.html">
+      <pre>             Otros</pre>
+      </li>
+    </a>
+  </ul>
+
+<hr color="black">
+<br>
+<div id="container">
+<div class="ex2">
+  &nbsp <a href="https://www.facebook.com/" target="_blank"> <img src="facebook.png" alt="facebook"></a>&nbsp &nbsp &nbsp
+  <a href="https://twitter.com/" target="_blank"><img src="twitter.png" alt="twitter"></a>&nbsp &nbsp &nbsp
+  <a href="https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank">  <img  src="gmail.jpg" alt="gmail"></a>&nbsp &nbsp &nbsp
+  <a href="https://www.instagram.com/?hl=es-la" target="_blank"> <img src="insta.jpg" alt="instagram"></a>
+  <br>
+  <p style="font-family: Architects Daughter; font-size:10px; text-align:right; margin-right:20px">Created by Oscar Adair Navarro Gonzalez.</p>
+</div>
+</div>
+<br>
+
+<br><br><br><br><br>
+</div>
+<img src="eventos.png" alt="presentacion" style="position:absolute; width:1109px; height:280px; margin: 0 0 0 240px">
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<table width="75%"  style="margin:0 0 0 300px;">
+  <tr>
+    <td align="left"><h1 style="font-family: Architects Daughter;">Formula 1</h1></td>
+    <td align="center"><h1 style="font-family: Architects Daughter;">Rally&nbsp&nbsp&nbsp</h1></td>
+    <td align="center"><h1 style="font-family: Architects Daughter;">&nbsp&nbspNascar&nbsp&nbsp</h1></td>
+  </tr>
+</table>
+
+      <!--Formula1-->
+      <div class="container" style="margin: 360px 0 0 200px;">
+      <div class="div-img hidden" >
+        <img class="img" src="formula1.jpg" title="Foto6" alt="Foto6">
+         <div class="overlay"></div>
+         <div class="text">La Fórmula 1, abreviada como F1 y también denominada la categoría reina del automovilismo o la máxima </div>
+       </div>
+     </div>
+
+     <div class="container" style="margin: 560px 0 50px 350px;">
+     <div class="div-img hidden" >
+       <img class="imgleft" src="formula1.1.jpg" title="Foto6" alt="Foto6">
+        <div class="overlay"></div>
+        <div class="textleft">categoría del automovilismo, es la competición de automovilismo internacional más popular <br> y prestigiosa.</div>
+      </div>
+    </div>
+
+    <!--Rally-->
+
+    <div class="container" style="margin: 360px 0 0 530px;">
+    <div class="div-img hidden" >
+      <img class="img" src="rally1.jpg" title="Foto6" alt="Foto6">
+       <div class="overlay"></div>
+       <div class="text">Es una competición automovilística que se disputa en carreteras abiertas al tráfico pero que se cierran </div>
+     </div>
+   </div>
+
+   <div class="container" style="margin: 560px 0 50px 680px;">
+   <div class="div-img hidden" >
+     <img class="imgleft" src="rally2.jpg" title="Foto6" alt="Foto6">
+      <div class="overlay"></div>
+      <div class="textleft">especialmente para su celebración. A la parte cerrada al tránsito rodado se le denomina tramo que es el lugar donde cada participante <br> compite y hacer <br> el menor tiempo. </div>
+    </div>
+  </div>
+
+  <!--Nascar-->
+
+  <div class="container" style="margin: 360px 0 0 850px;">
+  <div class="div-img hidden" >
+    <img class="img" src="nascar1.jpg" title="Foto6" alt="Foto6">
+     <div class="overlay"></div>
+     <div class="text">Hace referencia a las siglas en inglés de National Association for Stock Car Auto Racing y actualmente,</div>
+   </div>
+ </div>
+
+ <div class="container" style="margin: 560px 0 50px 1010px;">
+ <div class="div-img hidden" >
+   <img class="imgleft" src="narcar2.jpg" title="Foto6" alt="Foto6">
+    <div class="overlay"></div>
+    <div class="textleft">representa la categoría automovilística más comercial y popular de los Estados Unidos, y la competición de stock cars más importante <br> del mundo. </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</hmtl>
